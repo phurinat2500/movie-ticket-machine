@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
+                success: function (result) {
+                    var i;
+                    for(i=0;i<12;i++){
+                     $("#haha").append(result.data[i].id);
+                     $("#image").append('<img src =" '+result.data[i].image+'" />');
+                    
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    
+    <a id = haha></a>
+
+    
+
+</body>
+
+</html>

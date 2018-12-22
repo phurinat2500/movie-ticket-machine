@@ -1,155 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Heroic Features - Start Bootstrap Template</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+  <!-- Menu bar-->
+  <link rel="stylesheet" href="styles.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="script.js"></script>
+  <!-- Menu bar-->
+  <!--top image-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- top image-->
+  <style>
+    .aa {
+      border: solid 1px black;
+      text-align: center;
+    }
+  </style>
+  <!-- data moive -->
+  <script>
+    $(document).ready(function () {
 
-    <title>Heroic Features - Start Bootstrap Template</title>
+      $.ajax({
+        url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
+        success: function (result) {
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+          var i;
+          for (i = 0; i < 12; i++) {
 
-    <!-- Custom styles for this template -->
-    <link href="css/heroic-features.css" rel="stylesheet">
-
-    <!-- Menu bar-->   
-    <link rel="stylesheet" href="styles.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="script.js"></script>
-    <!-- Menu bar-->  
-
-    <!--top image-->   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- top image-->  
-  </head>
-
-  <body>
-      <center><img src="image/pp-logo.png"  height="100"alt="Logo"></center>
-    <!-- Menu bar-->   
-<div id='cssmenu'>
-    <ul>
-       <li class='active'><a href='#'>Home</a></li>
-       <li><a href='#'>Soon</a></li>
-       <li><a href='#'>Soon</a></li>
-       <li><a href='#'>Soon</a></li>
-      </ul>
- </div>
-    <!-- Menu bar-->  
-
-    <!-- Page Content -->
-    <div class="container">
-     
-      <!-- top image--> 
-        <div class="container">  
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol> 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img src="image/movie01.jpg" alt="Los Angeles" style="width:100%;">
-                </div>
-          
-                <div class="item">
-                  <img src="image/movie02.jpg" alt="Chicago" style="width:100%;">
-                </div>
-          
-                <div class="item">
-                  <img src="image/movie03.jpg" alt="New york" style="width:100%;">
-                </div>
-              </div>
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-    <!-- top image--> 
-        <br><br><br><br><br><br>
-      <!-- Page Features -->
-      <div class="row text-center">
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
+            $(".movie").append('<div class="row text-center">'+
+                              '<div class="col-lg-3 col-md-6 mb-4 ">'+
+                                '<div style="width: 280px;"class="card">'+
+                                  '<img style="width: auto; height: 400px; " class="card-img-top" src="'+result.data[i].image+'" alt="">'+
+                                    '<div class="card-body ">'+
+                                      '<h4 class="card-title">'+
+                                        '<div id="div0-2">'+result.data[i].name+'</div>'+
+                                      '</h4>'+
+                                      '<p class="card-text">ราคา'+result.data[i].price +'บาท<div id="div0-5"></div></p>'+
+                                    '</div>'+
+                                    '<div class="card-footer">'+
+                                      '<a href="#" class="btn btn-primary">ดูรายละเอียด</a>'+
+                                    '</div>'+
+                                  '</div>'+
+                                '</div>'+
+                              '</div>'+
+                            '</div>'
     
-      <!-- /.container -->
-    </footer>
+               );
+          }
+        }
+      });
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    });
+  </script>
+  <!-- data moive -->
 
-  </body>
+
+</head>
+
+<body>
+
+  
+
+  <center><img src="image/pp-logo.png" height="100" alt="Logo"></center>
+  <!-- Menu bar-->
+  <div id='cssmenu'>
+    <ul>
+      <li class='active'><a href='#'>Home</a></li>
+      <li><a href='#'>Soon</a></li>
+      <li><a href='#'>Soon</a></li>
+      <li><a href='#'>Soon</a></li>
+    </ul>
+  </div>
+  <!-- Menu bar-->
+  <div id="image">...
+  </div>
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- top image-->
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="image/movie01.jpg" alt="Los Angeles" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="image/movie02.jpg" alt="Chicago" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="image/movie03.jpg" alt="New york" style="width:100%;">
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <!-- top image-->
+    <br><br><br><br><br><br>
+
+
+      
+
+    <!-- Page Features -->
+    <!-- <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">
+                <div id="div0-2">dfgd
+                </div>
+              </h4>
+                <p class="card-text">ราคา บาท<div id="div0-5"></div></p>
+              </div>
+              <div class="card-footer">
+            <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!-- Page Features -->
+    <div  class="row movie"></div> 
+
+  </div>
+  <!-- /.container -->
+
+
+  <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
 
 </html>
