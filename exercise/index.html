@@ -23,9 +23,32 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- top image-->
   <style>
+   
     .aa {
       border: solid 1px black;
       text-align: center;
+    }
+    /**/
+    .detail {
+      display: none;
+    }
+    .btn-back {
+
+      cursor: pointer;
+      display: none;
+    }
+    .logo{
+      text-align: center;
+    }
+    .bg{
+      
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -o-background-size: 100% 100%, auto;
+      -moz-background-size: 100% 100%, auto;
+      -webkit-background-size: 100% 100%, auto;
+      background-size: 100% 100%, auto;
     }
   </style>
   <!-- data moive -->
@@ -39,7 +62,8 @@
           var i;
           for (i = 0; i < 12; i++) {
 
-            $(".movie").append('<div class="row text-center">'+
+            $(".movie").append('<div class="all">'+
+                            '<div class="row text-center">'+
                               '<div class="col-lg-3 col-md-6 mb-4 ">'+
                                 '<div style="width: 280px;"class="card">'+
                                   '<img style="width: auto; height: 400px; " class="card-img-top" src="'+result.data[i].image+'" alt="">'+
@@ -48,32 +72,53 @@
                                         '<div id="div0-2">'+result.data[i].name+'</div>'+
                                       '</h4>'+
                                       '<p class="card-text">ราคา'+result.data[i].price +'บาท<div id="div0-5"></div></p>'+
+                                        '<div class="detail">'+
+                                          '<p class="card-text02">รายละเอียดภาพยนต์ '+result.data[i].shot_description +'<div id="div0-5"></div></p>'+
+                                        '</div>'+
                                     '</div>'+
                                     '<div class="card-footer">'+
-                                      '<a href="#" class="btn btn-primary">ดูรายละเอียด</a>'+
+                                      '<a class="btn btn-primary">ดูรายละเอียด</a>'+
                                     '</div>'+
                                   '</div>'+
                                 '</div>'+
                               '</div>'+
+                            '</div>'+
                             '</div>'
-    
-               );
+                                      
+            );
           }
+          
+          
         }
+        
       });
+$('.movie').on("click", ".all", function () {
+                $(this).siblings().hide();
+                $(".detail,.btn-back").show();
+                $(this).find(".card-footer").hide();
 
     });
+
+$('.btn-back').click (function() {
+                $(".all").siblings().show();
+                $(".detail,.btn-back").hide();
+                $(".all").find(".card-footer").show();
+    });    
+    });
+    
+    
   </script>
   <!-- data moive -->
+
+  
 
 
 </head>
 
-<body>
-
+<body background="image/bg01.jpg" class="bg">
   
 
-  <center><img src="image/pp-logo.png" height="100" alt="Logo"></center>
+  <div class="logo"><img src="image/pp-logo.png" height="100" alt="Logo"></div>
   <!-- Menu bar-->
   <div id='cssmenu'>
     <ul>
@@ -99,7 +144,7 @@
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner ">
           <div class="item active">
             <img src="image/movie01.jpg" alt="Los Angeles" style="width:100%;">
           </div>
@@ -124,7 +169,7 @@
       </div>
     </div>
     <!-- top image-->
-    <br><br><br><br><br><br>
+    <br><br><br><br>
 
 
       
@@ -148,9 +193,12 @@
       </div>
     </div>-->
     <!-- Page Features -->
-    <div  class="row movie"></div> 
 
-  </div>
+  
+
+    <div  class="row movie"></div>
+    <button type="button" class="btn-back btn-primary">กลับไปหน้าหลัก</button>
+    </div>
   <!-- /.container -->
 
 
