@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>PP cinema</title>
+  <title>detail</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -47,70 +47,59 @@
       -moz-background-size: 100% 100%, auto;
       -webkit-background-size: 100% 100%, auto;
       background-size: 100% 100%, auto;
-
-    
+    }
+    .center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
   </style>
   <!-- data moive -->
-
-  
   <script>
-    
     $(document).ready(function () {
+            var param = GetParameterValues("id") - 1;
+            //------------------------------
+            function GetParameterValues(param) {
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < url.length; i++) {
+                    var urlparam = url[i].split('=');
+                    if (urlparam[0] == param) {
+                        return urlparam[1];
+                    }
+                }
+            }
+    
 
       $.ajax({
-        type: 'GET',
-        dataType: 'json',
         url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
         success: function (result) {
-
-          var i;
-          for (i = 0; i < 12; i++) {
-
-            $(".movie").append(
-                          '<a href="detail.html?id='+result.data[i].id+'">'+
-                          '<div class="all" >'+
+            $(".movie").html('<div class="all ">'+
                             '<div class="row text-center">'+
                               '<div class="col-lg-3 col-md-6 mb-4 ">'+
-                                '<div style="width: 280px;"class="card">'+
-                                  '<img style="width:278px; height: 400px; " class="card-img-top" src="'+result.data[i].image+'" alt="">'+
+                                '<div style="width: 1130px;"class="card">'+
+                                  '<img style="width: 278px; height: 400px; " class="card-img-top center" src="'+result.data[param].image+'" alt="">'+
                                     '<div class="card-body ">'+
                                       '<h4 class="card-title">'+
-                                        '<div id="div0-2">'+result.data[i].name+'</div>'+
+                                        '<div id="div0-2">'+result.data[param].name+'</div>'+
                                       '</h4>'+
-                                      '<p class="card-text">ราคา'+result.data[i].price +'บาท<div id="div0-5"></div></p>'+
-                                        
+                                      '<p class="card-text">ราคา'+result.data[param].price +'บาท<div id="div0-5"></div></p>'+
+                                        '<div class="detail">'+
+                                          '<p class="card-text02" >เรื่องย่อ <br>'+result.data[param].shot_description +'<div id="div0-5"></div></p>'+
+                                        '</div>'+
                                     '</div>'+
-                                    '<div class="card-footer" id="1">'+
-                                      
+                                    '<div class="card-footer">'+
+                                      '<a href="index.html" class="btn btn-primary">กลับไปหน้าหลัก</a>'+
                                     '</div>'+
                                   '</div>'+
                                 '</div>'+
                               '</div>'+
                             '</div>'+
-                          '</div>'+
-                        '</a>'
+                            '</div>'
                                       
             );
-          }
-          
-          
         }
-        
       });
-/*$('.movie').on("click", ".all", function () {
-      
-                $(this).siblings().hide();
-                $(".detail,.btn-back").show();
-                $(this).find(".card-footer").hide();
-
-    });
-
-$('.btn-back').click (function() {
-                $(".all").siblings().show();
-                $(".detail,.btn-back").hide();
-                $(".all").find(".card-footer").show();
-    });*/    
     });
     
     
@@ -125,11 +114,11 @@ $('.btn-back').click (function() {
 <body background="image/bg01.png" class="bg">
   
 
-  <div class="logo"><img src="image/pp-logo.png" height="100" alt="Logo"></div>
+  <div class="logo "><img src="image/pp-logo.png" height="100" alt="Logo"></div>
   <!-- Menu bar-->
-  <div id='cssmenu'>
+  <div id='cssmenu' >
     <ul>
-      <li class='active'><a href='#'>Home</a></li>
+      <li class='active'><a href='index.html'>Home</a></li>
       <li><a href='#'>Soon</a></li>
       <li><a href='#'>Soon</a></li>
       <li><a href='#'>Soon</a></li>
@@ -142,7 +131,7 @@ $('.btn-back').click (function() {
   <div class="container">
 
     <!-- top image-->
-    <div class="container">
+    <div class="container ">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -181,30 +170,12 @@ $('.btn-back').click (function() {
 
       
 
-    <!-- Page Features -->
-    <!-- <div class="row text-center">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">
-                <div id="div0-2">dfgd
-                </div>
-              </h4>
-                <p class="card-text">ราคา บาท<div id="div0-5"></div></p>
-              </div>
-              <div class="card-footer">
-            <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
-          </div>
-        </div>
-      </div>
-    </div>-->
-    <!-- Page Features -->
+    
 
   
 
     <div  class="row movie"></div>
-    
+    <!--<button type="button" class="btn-back btn-primary">กลับไปหน้าหลัก</button>-->
     </div>
   <!-- /.container -->
 
